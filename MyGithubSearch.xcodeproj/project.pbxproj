@@ -15,6 +15,9 @@
 		720825161CCD0BF600B3BF16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 720825141CCD0BF600B3BF16 /* LaunchScreen.storyboard */; };
 		720825211CCD0BF600B3BF16 /* MyGithubSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720825201CCD0BF600B3BF16 /* MyGithubSearchTests.swift */; };
 		7208252C1CCD0BF600B3BF16 /* MyGithubSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7208252B1CCD0BF600B3BF16 /* MyGithubSearchUITests.swift */; };
+		72F050BE1CCD171600219BD2 /* GitHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F050BD1CCD171600219BD2 /* GitHub.swift */; };
+		72F050BF1CCD171600219BD2 /* GitHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F050BD1CCD171600219BD2 /* GitHub.swift */; };
+		72F050C01CCD171600219BD2 /* GitHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F050BD1CCD171600219BD2 /* GitHub.swift */; };
 		776AF1D7EDE8403D8826767E /* Pods_MyGithubSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34D7858409E0F6D604A97929 /* Pods_MyGithubSearchTests.framework */; };
 		ABE5CC89EF15603B28EEF9B0 /* Pods_MyGithubSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EAF5E0076814D118B23D879 /* Pods_MyGithubSearch.framework */; };
 /* End PBXBuildFile section */
@@ -52,6 +55,8 @@
 		720825271CCD0BF600B3BF16 /* MyGithubSearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyGithubSearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7208252B1CCD0BF600B3BF16 /* MyGithubSearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGithubSearchUITests.swift; sourceTree = "<group>"; };
 		7208252D1CCD0BF600B3BF16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72F050BD1CCD171600219BD2 /* GitHub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHub.swift; sourceTree = "<group>"; };
+		72F050C11CCD177E00219BD2 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = "Pods/../build/Debug-iphoneos/AFNetworking/AFNetworking.framework"; sourceTree = "<group>"; };
 		7763C821B827C57B61CCCABB /* Pods_MyGithubSearchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyGithubSearchUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EAF5E0076814D118B23D879 /* Pods_MyGithubSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyGithubSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B894959203D2C8D85894F87 /* Pods-MyGithubSearchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyGithubSearchTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyGithubSearchTests/Pods-MyGithubSearchTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -120,6 +125,7 @@
 				720825121CCD0BF600B3BF16 /* Assets.xcassets */,
 				720825141CCD0BF600B3BF16 /* LaunchScreen.storyboard */,
 				720825171CCD0BF600B3BF16 /* Info.plist */,
+				72F050BD1CCD171600219BD2 /* GitHub.swift */,
 			);
 			path = MyGithubSearch;
 			sourceTree = "<group>";
@@ -158,6 +164,7 @@
 		AF451A47DBF0D03ABE0E2CB5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				72F050C11CCD177E00219BD2 /* AFNetworking.framework */,
 				7EAF5E0076814D118B23D879 /* Pods_MyGithubSearch.framework */,
 				34D7858409E0F6D604A97929 /* Pods_MyGithubSearchTests.framework */,
 				7763C821B827C57B61CCCABB /* Pods_MyGithubSearchUITests.framework */,
@@ -430,6 +437,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72F050BE1CCD171600219BD2 /* GitHub.swift in Sources */,
 				7208250E1CCD0BF600B3BF16 /* ViewController.swift in Sources */,
 				7208250C1CCD0BF600B3BF16 /* AppDelegate.swift in Sources */,
 			);
@@ -439,6 +447,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72F050BF1CCD171600219BD2 /* GitHub.swift in Sources */,
 				720825211CCD0BF600B3BF16 /* MyGithubSearchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -447,6 +456,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72F050C01CCD171600219BD2 /* GitHub.swift in Sources */,
 				7208252C1CCD0BF600B3BF16 /* MyGithubSearchUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -576,6 +586,10 @@
 			baseConfigurationReference = 6FFD937F251CDC3CE5F1E3AC /* Pods-MyGithubSearch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/AFNetworking",
+				);
 				INFOPLIST_FILE = MyGithubSearch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kazucocoa.MyGithubSearch;
@@ -588,6 +602,10 @@
 			baseConfigurationReference = DD6DC2FA359CD5C5377A0312 /* Pods-MyGithubSearch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/AFNetworking",
+				);
 				INFOPLIST_FILE = MyGithubSearch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kazucocoa.MyGithubSearch;

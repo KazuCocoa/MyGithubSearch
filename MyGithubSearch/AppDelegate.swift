@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  MyGithubSearch
-//
-//  Created by 松尾和昭 on 24/04/2016.
-//  Copyright © 2016 kazucocoa. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain

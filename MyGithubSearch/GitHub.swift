@@ -24,6 +24,9 @@ public class GitHubAPI {
         return manager
     }()
 
+    public init() {
+    }
+
     public func request<Endpoint: APIEndpoint>(endpoint: Endpoint, handler: (task: NSURLSessionDataTask, response: Endpoint.ResponseType?, error: ErrorType?) -> Void) {
         let success = { (task: NSURLSessionDataTask, response: AnyObject?) -> Void in
             if let JSON = response as? JSONObject {
@@ -51,9 +54,17 @@ public class GitHubAPI {
         public var path = "search/repositories"
         public var method = HTTPMethod.Get
         public var parameters: [NSObject : AnyObject] {
-            return [:]
+            return [
+                "q": query,
+            ]
         }
         public typealias ResponseType = SearchResult<Repository>
+
+        public let query: String
+
+        public init(query: String) {
+            self.query = query
+        }
     }
 }
 

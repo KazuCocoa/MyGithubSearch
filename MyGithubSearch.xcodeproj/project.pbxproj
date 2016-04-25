@@ -18,6 +18,11 @@
 		72F050BE1CCD171600219BD2 /* GitHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F050BD1CCD171600219BD2 /* GitHub.swift */; };
 		72F050BF1CCD171600219BD2 /* GitHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F050BD1CCD171600219BD2 /* GitHub.swift */; };
 		72F050C01CCD171600219BD2 /* GitHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F050BD1CCD171600219BD2 /* GitHub.swift */; };
+		72F050CA1CCD790000219BD2 /* ApplicationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F050C91CCD790000219BD2 /* ApplicationContext.swift */; };
+		72F050CC1CCD7D8F00219BD2 /* SearchRepositoriesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F050CB1CCD7D8F00219BD2 /* SearchRepositoriesManager.swift */; };
+		72F050CD1CCD7D8F00219BD2 /* SearchRepositoriesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F050CB1CCD7D8F00219BD2 /* SearchRepositoriesManager.swift */; };
+		72F050CF1CCD806200219BD2 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F050CE1CCD806200219BD2 /* SearchViewController.swift */; };
+		72F050D01CCD806200219BD2 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F050CE1CCD806200219BD2 /* SearchViewController.swift */; };
 		776AF1D7EDE8403D8826767E /* Pods_MyGithubSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34D7858409E0F6D604A97929 /* Pods_MyGithubSearchTests.framework */; };
 		ABE5CC89EF15603B28EEF9B0 /* Pods_MyGithubSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EAF5E0076814D118B23D879 /* Pods_MyGithubSearch.framework */; };
 /* End PBXBuildFile section */
@@ -57,6 +62,9 @@
 		7208252D1CCD0BF600B3BF16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72F050BD1CCD171600219BD2 /* GitHub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHub.swift; sourceTree = "<group>"; };
 		72F050C11CCD177E00219BD2 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = "Pods/../build/Debug-iphoneos/AFNetworking/AFNetworking.framework"; sourceTree = "<group>"; };
+		72F050C91CCD790000219BD2 /* ApplicationContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationContext.swift; sourceTree = "<group>"; };
+		72F050CB1CCD7D8F00219BD2 /* SearchRepositoriesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchRepositoriesManager.swift; sourceTree = "<group>"; };
+		72F050CE1CCD806200219BD2 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		7763C821B827C57B61CCCABB /* Pods_MyGithubSearchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyGithubSearchUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EAF5E0076814D118B23D879 /* Pods_MyGithubSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyGithubSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B894959203D2C8D85894F87 /* Pods-MyGithubSearchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyGithubSearchTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyGithubSearchTests/Pods-MyGithubSearchTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +134,9 @@
 				720825141CCD0BF600B3BF16 /* LaunchScreen.storyboard */,
 				720825171CCD0BF600B3BF16 /* Info.plist */,
 				72F050BD1CCD171600219BD2 /* GitHub.swift */,
+				72F050C91CCD790000219BD2 /* ApplicationContext.swift */,
+				72F050CB1CCD7D8F00219BD2 /* SearchRepositoriesManager.swift */,
+				72F050CE1CCD806200219BD2 /* SearchViewController.swift */,
 			);
 			path = MyGithubSearch;
 			sourceTree = "<group>";
@@ -437,6 +448,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72F050CF1CCD806200219BD2 /* SearchViewController.swift in Sources */,
+				72F050CC1CCD7D8F00219BD2 /* SearchRepositoriesManager.swift in Sources */,
+				72F050CA1CCD790000219BD2 /* ApplicationContext.swift in Sources */,
 				72F050BE1CCD171600219BD2 /* GitHub.swift in Sources */,
 				7208250E1CCD0BF600B3BF16 /* ViewController.swift in Sources */,
 				7208250C1CCD0BF600B3BF16 /* AppDelegate.swift in Sources */,
@@ -448,6 +462,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				72F050BF1CCD171600219BD2 /* GitHub.swift in Sources */,
+				72F050CD1CCD7D8F00219BD2 /* SearchRepositoriesManager.swift in Sources */,
+				72F050D01CCD806200219BD2 /* SearchViewController.swift in Sources */,
 				720825211CCD0BF600B3BF16 /* GitHubTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -106,6 +106,8 @@ public struct Repository: JSONDecodable {
     }
 }
 
+// MARK: - Utilities
+
 private func getValue<T>(JSON: JSONObject, key: String) throws -> T {
     guard let value = JSON[key] else {
         throw JSONDecodeError.MissingRequiredKey(key)

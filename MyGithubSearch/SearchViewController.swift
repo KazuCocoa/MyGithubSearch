@@ -2,7 +2,7 @@ import UIKit
 
 class SearchViewController: UITableViewController, ApplicationContextSettable {
 
-    var appContext: ApplicationContext?
+    var appContext: ApplicationContext!
 
     lazy var searchController: UISearchController = {
         let controller = UISearchController(searchResultsController: nil)
@@ -37,6 +37,7 @@ class SearchViewController: UITableViewController, ApplicationContextSettable {
 
         return cell
     }
+
 }
 
 extension SearchViewController: UISearchControllerDelegate {
@@ -45,7 +46,7 @@ extension SearchViewController: UISearchControllerDelegate {
 extension SearchViewController: UISearchResultsUpdating {
     func updateSearchResultsForSearchController(searchController: UISearchController) {
         guard let searchText = searchController.searchBar.text else { return }
-        guard let searchManager = SearchRepositoriesManager(github: appContext!.github, query: searchText) else { return }
+        guard let searchManager = SearchRepositoriesManager(github: appContext.github, query: searchText) else { return }
         self.searchManager = searchManager
         searchManager.search { [weak self] (error) in
             if let error = error {

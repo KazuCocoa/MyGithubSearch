@@ -1,6 +1,7 @@
 import Foundation
 
 class SearchRepositoriesManager {
+
     let github: GitHubAPI
     let query: String
 
@@ -22,4 +23,5 @@ class SearchRepositoriesManager {
             completion(error: error)
         }
     }
+
 }

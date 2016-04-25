@@ -8,7 +8,7 @@
         <!--Root View Controller-->
         <scene sceneID="5l2-7X-Zl1">
             <objects>
-                <tableViewController id="q9U-wO-3fR" customClass="SearchViewController" customModule="GitHubSearch" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="q9U-wO-3fR" customClass="SearchViewController" customModule="MyGithubSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="W4k-Dz-fMX">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

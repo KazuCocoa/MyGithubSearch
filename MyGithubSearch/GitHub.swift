@@ -1,3 +1,5 @@
+import Foundation
+
 import AFNetworking
 
 public typealias JSONObject = [String: AnyObject]
@@ -40,15 +42,14 @@ public class GitHubAPI {
                 handler(task: task, response: nil, error: APIError.UnexpectedResponse)
             }
         }
-        let failure = { (task: NSURLSessionDataTask?, error: NSError) -> Void in
-            var returnError = error
-            if let errorData = error.userInfo[AFNetworkingOperationFailingURLRequestErrorKey] as? NSData,
+        let failure = { (task: NSURLSessionDataTask?, var error: NSError) -> Void in
+            if let errorData = error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey] as? NSData,
                 let errorDescription = NSString(data: errorData, encoding: NSUTF8StringEncoding) {
                 var userInfo = error.userInfo
                 userInfo[NSLocalizedFailureReasonErrorKey] = errorDescription
-                returnError = NSError(domain: error.domain, code: error.code, userInfo: userInfo)
+                error = NSError(domain: error.domain, code: error.code, userInfo: userInfo)
             }
-            handler(task: task!, response: nil, error: returnError)
+            handler(task: task!, response: nil, error: error)
         }
 
         switch endpoint.method {
@@ -57,12 +58,14 @@ public class GitHubAPI {
         }
     }
 
+    // MARK: - Endpoints
+
     public struct SearchRepositories: APIEndpoint {
         public var path = "search/repositories"
         public var method = HTTPMethod.Get
-        public var parameters: [NSObject : AnyObject] {
+        public var parameters: [NSObject: AnyObject] {
             return [
-                "q": query,
+                "q" : query,
             ]
         }
         public typealias ResponseType = SearchResult<Repository>
@@ -106,16 +109,16 @@ public struct Repository: JSONDecodable {
     }
 }
 
+
 // MARK: - Utilities
 
 private func getValue<T>(JSON: JSONObject, key: String) throws -> T {
     guard let value = JSON[key] else {
         throw JSONDecodeError.MissingRequiredKey(key)
     }
-
     guard let typedValue = value as? T else {
-            throw JSONDecodeError.UnexpectedType(key: key, expected: T.self, actual: value.dynamicType)
-        }
+        throw JSONDecodeError.UnexpectedType(key: key, expected: T.self, actual: value.dynamicType)
+    }
     return typedValue
 }
 

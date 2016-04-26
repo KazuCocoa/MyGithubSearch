@@ -1,4 +1,5 @@
 import UIKit
+import SafariServices
 
 class SearchViewController: UITableViewController, ApplicationContextSettable {
 
@@ -39,7 +40,15 @@ class SearchViewController: UITableViewController, ApplicationContextSettable {
         return cell
     }
 
+    // MARK: - Table view delegate
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let repository = searchManager!.results[indexPath.row]
+        let safari = SFSafariViewController(URL: repository.HTMLURL)
+        safari.delegate = self
+        presentViewController(safari, animated: true, completion: nil)
+    }
 }
+
 
 extension SearchViewController: UISearchControllerDelegate {
 }
@@ -57,5 +66,11 @@ extension SearchViewController: UISearchBarDelegate {
                 self?.searchController.active = false
             }
         }
+    }
+}
+
+extension SearchViewController: SFSafariViewControllerDelegate {
+    func safariViewControllerDidFinish(controller: SFSafariViewController) {
+        controller.dismissViewControllerAnimated(true, completion: nil)
     }
 }

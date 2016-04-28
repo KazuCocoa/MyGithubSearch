@@ -22,6 +22,8 @@
 		72F050CD1CCD7D8F00219BD2 /* SearchRepositoriesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F050CB1CCD7D8F00219BD2 /* SearchRepositoriesManager.swift */; };
 		72F050CF1CCD806200219BD2 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F050CE1CCD806200219BD2 /* SearchViewController.swift */; };
 		72F050D01CCD806200219BD2 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F050CE1CCD806200219BD2 /* SearchViewController.swift */; };
+		72F050D21CD17B4900219BD2 /* RepositoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F050D11CD17B4900219BD2 /* RepositoryViewController.swift */; };
+		72F050D31CD17B4900219BD2 /* RepositoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F050D11CD17B4900219BD2 /* RepositoryViewController.swift */; };
 		776AF1D7EDE8403D8826767E /* Pods_MyGithubSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34D7858409E0F6D604A97929 /* Pods_MyGithubSearchTests.framework */; };
 		ABE5CC89EF15603B28EEF9B0 /* Pods_MyGithubSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EAF5E0076814D118B23D879 /* Pods_MyGithubSearch.framework */; };
 /* End PBXBuildFile section */
@@ -63,6 +65,7 @@
 		72F050C91CCD790000219BD2 /* ApplicationContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationContext.swift; sourceTree = "<group>"; };
 		72F050CB1CCD7D8F00219BD2 /* SearchRepositoriesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchRepositoriesManager.swift; sourceTree = "<group>"; };
 		72F050CE1CCD806200219BD2 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		72F050D11CD17B4900219BD2 /* RepositoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryViewController.swift; sourceTree = "<group>"; };
 		7763C821B827C57B61CCCABB /* Pods_MyGithubSearchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyGithubSearchUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EAF5E0076814D118B23D879 /* Pods_MyGithubSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyGithubSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B894959203D2C8D85894F87 /* Pods-MyGithubSearchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyGithubSearchTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyGithubSearchTests/Pods-MyGithubSearchTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -134,6 +137,7 @@
 				72F050C91CCD790000219BD2 /* ApplicationContext.swift */,
 				72F050CB1CCD7D8F00219BD2 /* SearchRepositoriesManager.swift */,
 				72F050CE1CCD806200219BD2 /* SearchViewController.swift */,
+				72F050D11CD17B4900219BD2 /* RepositoryViewController.swift */,
 			);
 			path = MyGithubSearch;
 			sourceTree = "<group>";
@@ -449,6 +453,7 @@
 				72F050CC1CCD7D8F00219BD2 /* SearchRepositoriesManager.swift in Sources */,
 				72F050CA1CCD790000219BD2 /* ApplicationContext.swift in Sources */,
 				72F050BE1CCD171600219BD2 /* GitHub.swift in Sources */,
+				72F050D21CD17B4900219BD2 /* RepositoryViewController.swift in Sources */,
 				7208250C1CCD0BF600B3BF16 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,6 +466,7 @@
 				72F050CD1CCD7D8F00219BD2 /* SearchRepositoriesManager.swift in Sources */,
 				72F050D01CCD806200219BD2 /* SearchViewController.swift in Sources */,
 				720825211CCD0BF600B3BF16 /* GitHubTests.swift in Sources */,
+				72F050D31CD17B4900219BD2 /* RepositoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

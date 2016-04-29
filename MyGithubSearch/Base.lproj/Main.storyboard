@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Root View Controller-->
@@ -37,6 +38,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="mMC-jl-08w" kind="show" id="FeY-Mf-nnv"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -49,6 +53,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BEK-Kx-hZ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="985" y="220"/>
+        </scene>
+        <!--Repository View Controller-->
+        <scene sceneID="EqE-bw-jIW">
+            <objects>
+                <viewController id="mMC-jl-08w" userLabel="Repository View Controller" customClass="RepositoryViewController" customModule="MyGithubSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5Rv-CD-iZm"/>
+                        <viewControllerLayoutGuide type="bottom" id="2BC-Ci-ODe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZrZ-La-dLj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dbo-dC-HAN" userLabel="URL Button">
+                                <rect key="frame" x="20" y="101" width="560" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="openURL:" destination="mMC-jl-08w" eventType="touchUpInside" id="yQL-YH-Nms"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oeV-mF-QPY" userLabel="Name Label">
+                                <rect key="frame" x="20" y="72" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Dbo-dC-HAN" firstAttribute="top" secondItem="oeV-mF-QPY" secondAttribute="bottom" constant="8" id="9iT-im-0ER"/>
+                            <constraint firstItem="oeV-mF-QPY" firstAttribute="trailing" secondItem="ZrZ-La-dLj" secondAttribute="trailingMargin" id="C8a-Jf-gKt"/>
+                            <constraint firstItem="oeV-mF-QPY" firstAttribute="leading" secondItem="ZrZ-La-dLj" secondAttribute="leadingMargin" id="LGu-4L-avQ"/>
+                            <constraint firstItem="oeV-mF-QPY" firstAttribute="top" secondItem="5Rv-CD-iZm" secondAttribute="bottom" constant="8" id="bib-Ls-ITT"/>
+                            <constraint firstItem="Dbo-dC-HAN" firstAttribute="leading" secondItem="ZrZ-La-dLj" secondAttribute="leadingMargin" id="lby-mC-tRu"/>
+                            <constraint firstItem="Dbo-dC-HAN" firstAttribute="trailing" secondItem="ZrZ-La-dLj" secondAttribute="trailingMargin" id="vfm-qH-63o"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="URLButton" destination="Dbo-dC-HAN" id="wgW-zq-uwO"/>
+                        <outlet property="nameLabel" destination="oeV-mF-QPY" id="TjG-ff-bRm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tFj-mG-cdB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1750" y="220"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JQ7-JH-SuC">

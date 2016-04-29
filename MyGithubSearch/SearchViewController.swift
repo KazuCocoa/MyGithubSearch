@@ -20,6 +20,19 @@ class SearchViewController: UITableViewController, ApplicationContextSettable {
         tableView.tableHeaderView = searchController.searchBar
     }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        switch segue.destinationViewController {
+        case let repositoryVC as RepositoryViewController:
+            repositoryVC.appContext = appContext
+            if let indexPath = tableView.indexPathForSelectedRow,
+                let repository = searchManager?.results[indexPath.row] {
+                repositoryVC.repository = repository
+            }
+        default:
+            fatalError("Unexpected segue")
+        }
+    }
+
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -41,12 +54,6 @@ class SearchViewController: UITableViewController, ApplicationContextSettable {
     }
 
     // MARK: - Table view delegate
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let repository = searchManager!.results[indexPath.row]
-        let safari = SFSafariViewController(URL: repository.HTMLURL)
-        safari.delegate = self
-        presentViewController(safari, animated: true, completion: nil)
-    }
 
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         if let searchManager = searchManager where indexPath.row >= searchManager.results.count - 1 {
@@ -78,11 +85,5 @@ extension SearchViewController: UISearchBarDelegate {
                 self?.searchController.active = false
             }
         }
-    }
-}
-
-extension SearchViewController: SFSafariViewControllerDelegate {
-    func safariViewControllerDidFinish(controller: SFSafariViewController) {
-        controller.dismissViewControllerAnimated(true, completion: nil)
     }
 }

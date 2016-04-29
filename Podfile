@@ -8,7 +8,7 @@ target 'MyGithubSearch' do
 end
 
 target 'MyGithubSearchTests' do
-
+  pod 'OHHTTPStubs', '~> 4.1.0'
 end
 
 target 'MyGithubSearchUITests' do

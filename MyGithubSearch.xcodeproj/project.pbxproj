@@ -14,6 +14,8 @@
 		720825161CCD0BF600B3BF16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 720825141CCD0BF600B3BF16 /* LaunchScreen.storyboard */; };
 		720825211CCD0BF600B3BF16 /* GitHubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720825201CCD0BF600B3BF16 /* GitHubTests.swift */; };
 		7208252C1CCD0BF600B3BF16 /* MyGithubSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7208252B1CCD0BF600B3BF16 /* MyGithubSearchUITests.swift */; };
+		72814A5D1CD3CD91003EDBAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7208250B1CCD0BF600B3BF16 /* AppDelegate.swift */; };
+		72814A5E1CD3CDA3003EDBAF /* ApplicationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F050C91CCD790000219BD2 /* ApplicationContext.swift */; };
 		72F050BE1CCD171600219BD2 /* GitHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F050BD1CCD171600219BD2 /* GitHub.swift */; };
 		72F050BF1CCD171600219BD2 /* GitHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F050BD1CCD171600219BD2 /* GitHub.swift */; };
 		72F050C01CCD171600219BD2 /* GitHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F050BD1CCD171600219BD2 /* GitHub.swift */; };
@@ -463,6 +465,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				72F050BF1CCD171600219BD2 /* GitHub.swift in Sources */,
+				72814A5E1CD3CDA3003EDBAF /* ApplicationContext.swift in Sources */,
+				72814A5D1CD3CD91003EDBAF /* AppDelegate.swift in Sources */,
 				72F050CD1CCD7D8F00219BD2 /* SearchRepositoriesManager.swift in Sources */,
 				72F050D01CCD806200219BD2 /* SearchViewController.swift in Sources */,
 				720825211CCD0BF600B3BF16 /* GitHubTests.swift in Sources */,

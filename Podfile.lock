@@ -14,16 +14,19 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - EarlGrey (1.0.0)
   - OHHTTPStubs (4.1.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
+  - EarlGrey
   - OHHTTPStubs (~> 4.1.0)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  EarlGrey: d23692dedb9759a00c0e316ca015814b3fc528f1
   OHHTTPStubs: f3473ab21dbf0815253ac96b977d5c36f1daad09
 
-PODFILE CHECKSUM: 9efd10a6ddf7c1e7f03f0852a2028eec9e7a9ce0
+PODFILE CHECKSUM: fe66ce1ea9c97c4336789cb530f2d600852b1847
 
 COCOAPODS: 1.0.0.beta.8

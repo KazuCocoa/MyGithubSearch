@@ -68,6 +68,7 @@ class MyGithubSearchTests: XCTestCase {
             }, withStubResponse: { (request) -> OHHTTPStubsResponse in
                 return OHHTTPStubsResponse(named: "error_rate-limit", inBundle: NSBundle(forClass: self.dynamicType))
         })
+
         let e = expectationWithDescription("API Request")
         github.request(GitHubAPI.SearchRepositories(query: "Markdown", page: 13)) { (task, response, error) -> Void in
             XCTAssert(response == nil)

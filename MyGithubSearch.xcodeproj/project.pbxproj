@@ -14,6 +14,8 @@
 		720825161CCD0BF600B3BF16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 720825141CCD0BF600B3BF16 /* LaunchScreen.storyboard */; };
 		720825211CCD0BF600B3BF16 /* GitHubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720825201CCD0BF600B3BF16 /* GitHubTests.swift */; };
 		7208252C1CCD0BF600B3BF16 /* MyGithubSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7208252B1CCD0BF600B3BF16 /* MyGithubSearchUITests.swift */; };
+		722477421CD5A8FD00FCC154 /* error_rate-limit.response in Resources */ = {isa = PBXBuildFile; fileRef = 722477401CD5A8FD00FCC154 /* error_rate-limit.response */; };
+		722477431CD5A8FD00FCC154 /* search-repositories_q-Hatena_page-1.response in Resources */ = {isa = PBXBuildFile; fileRef = 722477411CD5A8FD00FCC154 /* search-repositories_q-Hatena_page-1.response */; };
 		72814A5D1CD3CD91003EDBAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7208250B1CCD0BF600B3BF16 /* AppDelegate.swift */; };
 		72814A5E1CD3CDA3003EDBAF /* ApplicationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F050C91CCD790000219BD2 /* ApplicationContext.swift */; };
 		72F050BE1CCD171600219BD2 /* GitHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F050BD1CCD171600219BD2 /* GitHub.swift */; };
@@ -62,6 +64,8 @@
 		720825271CCD0BF600B3BF16 /* MyGithubSearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyGithubSearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7208252B1CCD0BF600B3BF16 /* MyGithubSearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGithubSearchUITests.swift; sourceTree = "<group>"; };
 		7208252D1CCD0BF600B3BF16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		722477401CD5A8FD00FCC154 /* error_rate-limit.response */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "error_rate-limit.response"; sourceTree = "<group>"; };
+		722477411CD5A8FD00FCC154 /* search-repositories_q-Hatena_page-1.response */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "search-repositories_q-Hatena_page-1.response"; sourceTree = "<group>"; };
 		72F050BD1CCD171600219BD2 /* GitHub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHub.swift; sourceTree = "<group>"; };
 		72F050C11CCD177E00219BD2 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = "Pods/../build/Debug-iphoneos/AFNetworking/AFNetworking.framework"; sourceTree = "<group>"; };
 		72F050C91CCD790000219BD2 /* ApplicationContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationContext.swift; sourceTree = "<group>"; };
@@ -108,6 +112,7 @@
 		720824FF1CCD0BF500B3BF16 = {
 			isa = PBXGroup;
 			children = (
+				7224773F1CD5A8FD00FCC154 /* MockResponse */,
 				7208250A1CCD0BF600B3BF16 /* MyGithubSearch */,
 				7208251F1CCD0BF600B3BF16 /* MyGithubSearchTests */,
 				7208252A1CCD0BF600B3BF16 /* MyGithubSearchUITests */,
@@ -160,6 +165,15 @@
 				7208252D1CCD0BF600B3BF16 /* Info.plist */,
 			);
 			path = MyGithubSearchUITests;
+			sourceTree = "<group>";
+		};
+		7224773F1CD5A8FD00FCC154 /* MockResponse */ = {
+			isa = PBXGroup;
+			children = (
+				722477401CD5A8FD00FCC154 /* error_rate-limit.response */,
+				722477411CD5A8FD00FCC154 /* search-repositories_q-Hatena_page-1.response */,
+			);
+			path = MockResponse;
 			sourceTree = "<group>";
 		};
 		90E3776A1183AE40A972A91F /* Pods */ = {
@@ -311,6 +325,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				722477431CD5A8FD00FCC154 /* search-repositories_q-Hatena_page-1.response in Resources */,
+				722477421CD5A8FD00FCC154 /* error_rate-limit.response in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -357,6 +357,7 @@
 					720825071CCD0BF500B3BF16 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 47PCFA586Q;
+						LastSwiftMigration = 0810;
 					};
 					7208251B1CCD0BF600B3BF16 = {
 						CreatedOnToolsVersion = 7.3;
@@ -371,6 +372,7 @@
 					722477471CD5B28C00FCC154 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 47PCFA586Q;
+						LastSwiftMigration = 0810;
 						TestTargetID = 720825071CCD0BF500B3BF16;
 					};
 				};
@@ -784,6 +786,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kazucocoa.MyGithubSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -800,6 +803,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kazucocoa.MyGithubSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -863,6 +867,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kazucocoa.MyGithubSearchEarlGrey;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "MyGithubSearchEarlGrey/MyGithubSearch-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyGithubSearch.app/MyGithubSearch";
 			};
 			name = Debug;
@@ -877,6 +882,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kazucocoa.MyGithubSearchEarlGrey;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "MyGithubSearchEarlGrey/MyGithubSearch-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyGithubSearch.app/MyGithubSearch";
 			};
 			name = Release;

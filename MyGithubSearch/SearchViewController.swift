@@ -20,8 +20,8 @@ class SearchViewController: UITableViewController, ApplicationContextSettable {
         tableView.tableHeaderView = searchController.searchBar
     }
 
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        switch segue.destinationViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.destination {
         case let repositoryVC as RepositoryViewController:
             repositoryVC.appContext = appContext
             if let indexPath = tableView.indexPathForSelectedRow,
@@ -35,16 +35,16 @@ class SearchViewController: UITableViewController, ApplicationContextSettable {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return searchManager?.results.count ?? 0
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("RepositoryCell", forIndexPath: indexPath)
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RepositoryCell", for: indexPath)
 
         let repository = searchManager!.results[indexPath.row]
         cell.textLabel?.text = repository.fullName
@@ -55,8 +55,8 @@ class SearchViewController: UITableViewController, ApplicationContextSettable {
 
     // MARK: - Table view delegate
 
-    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        if let searchManager = searchManager where indexPath.row >= searchManager.results.count - 1 {
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if let searchManager = searchManager, indexPath.row >= searchManager.results.count - 1 {
             searchManager.search(false) { [weak self] (error) in
                 if let error = error {
                     print(error)
@@ -73,7 +73,7 @@ extension SearchViewController: UISearchControllerDelegate {
 }
 
 extension SearchViewController: UISearchBarDelegate {
-    func searchBarTextDidEndEditing(searchBar: UISearchBar) {
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         guard let searchText = searchController.searchBar.text else { return }
         guard let searchManager = SearchRepositoriesManager(github: appContext.github, query: searchText) else { return }
         self.searchManager = searchManager
@@ -82,7 +82,7 @@ extension SearchViewController: UISearchBarDelegate {
                 print(error)
             } else {
                 self?.tableView.reloadData()
-                self?.searchController.active = false
+                self?.searchController.isActive = false
             }
         }
     }

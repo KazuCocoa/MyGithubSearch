@@ -19,7 +19,7 @@ class SearchRepositoriesManager {
         }
     }
 
-    func search(reload: Bool, completion: (error: ErrorType?) -> Void) -> Bool {
+    func search(_ reload: Bool, completion: @escaping (_ error: Error?) -> Void) -> Bool {
         if completed || networking {
             return false
         }
@@ -30,7 +30,7 @@ class SearchRepositoriesManager {
                     self.results.removeAll()
                     self.page = 1
                 }
-                self.results.appendContentsOf(response.items)
+                self.results.append(contentsOf: response.items)
                 self.completed = response.totalCount <= self.results.count
                 self.page += 1
             }

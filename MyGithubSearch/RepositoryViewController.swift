@@ -14,18 +14,18 @@ class RepositoryViewController: UIViewController, ApplicationContextSettable {
         super.viewDidLoad()
         title = repository.name
         nameLabel.text = repository.fullName
-        URLButton.setTitle(repository.HTMLURL.absoluteString, forState: .Normal)
+        URLButton.setTitle(repository.HTMLURL.absoluteString, for: UIControlState())
     }
 
-    @IBAction func openURL(sender: AnyObject) {
-        let safari = SFSafariViewController(URL: repository.HTMLURL)
+    @IBAction func openURL(_ sender: AnyObject) {
+        let safari = SFSafariViewController(url: repository.HTMLURL as URL)
         safari.delegate = self
-        presentViewController(safari, animated: true, completion: nil)
+        present(safari, animated: true, completion: nil)
     }
 }
 
 extension RepositoryViewController: SFSafariViewControllerDelegate {
-    func safariViewControllerDidFinish(controller: SFSafariViewController) {
-        controller.dismissViewControllerAnimated(true, completion: nil)
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        controller.dismiss(animated: true, completion: nil)
     }
 }

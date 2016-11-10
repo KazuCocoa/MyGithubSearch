@@ -15,55 +15,55 @@
 //
 
 public func EarlGrey() -> EarlGreyImpl {
-    return EarlGreyImpl.invokedFromFile(#file, lineNumber: #line)
+    return EarlGreyImpl.invoked(fromFile: #file, lineNumber: #line)
 }
 
-public func GREYAssert(@autoclosure expression: () -> BooleanType, reason: String) {
+public func GREYAssert(_ expression: @autoclosure () -> Bool, reason: String) {
     GREYAssert(expression, reason, details: "Expected expression to be true")
 }
 
-public func GREYAssertTrue(@autoclosure expression: () -> BooleanType, reason: String) {
+public func GREYAssertTrue(_ expression: @autoclosure () -> Bool, reason: String) {
     GREYAssert(expression().boolValue,
                reason,
                details: "Expected the boolean expression to be true")
 }
 
-public func GREYAssertFalse(@autoclosure expression: () -> BooleanType, reason: String) {
+public func GREYAssertFalse(_ expression: @autoclosure () -> Bool, reason: String) {
     GREYAssert(!expression().boolValue,
                reason,
                details: "Expected the boolean expression to be true")
 }
 
-public func GREYAssertNotNil(@autoclosure expression: () -> Any?, reason: String) {
+public func GREYAssertNotNil(_ expression: @autoclosure () -> Any?, reason: String) {
     GREYAssert(expression() != nil, reason, details: "Expected expression to be not nil")
 }
 
-public func GREYAssertNil(@autoclosure expression: () -> Any?, reason: String) {
+public func GREYAssertNil(_ expression: @autoclosure () -> Any?, reason: String) {
     GREYAssert(expression() == nil, reason, details: "Expected expression to be nil")
 }
 
-public func GREYAssertEqual<T : Equatable>(@autoclosure left: () -> T?,
-                            @autoclosure _ right: () -> T?, reason: String) {
+public func GREYAssertEqual<T : Equatable>(_ left: @autoclosure () -> T?,
+                            _ right: @autoclosure () -> T?, reason: String) {
     GREYAssert(left() == right(), reason, details: "Expeted left term to be equal to right term")
 }
 
-public func GREYFail(reason: String) {
-    greyFailureHandler.handleException(GREYFrameworkException(name: kGREYAssertionFailedException,
+public func GREYFail(_ reason: String) {
+    greyFailureHandler.handle(GREYFrameworkException(name: kGREYAssertionFailedException,
         reason: reason),
                                        details: "")
 }
 
-public func GREYFail(reason: String, details: String) {
-    greyFailureHandler.handleException(GREYFrameworkException(name: kGREYAssertionFailedException,
+public func GREYFail(_ reason: String, details: String) {
+    greyFailureHandler.handle(GREYFrameworkException(name: kGREYAssertionFailedException,
         reason: reason),
                                        details: details)
 }
 
-private func GREYAssert(@autoclosure expression: () -> BooleanType,
+private func GREYAssert(_ expression: @autoclosure () -> Bool,
                                      _ reason: String, details: String) {
     GREYSetCurrentAsFailable()
     if !expression().boolValue {
-        greyFailureHandler.handleException(GREYFrameworkException(name: kGREYAssertionFailedException,
+        greyFailureHandler.handle(GREYFrameworkException(name: kGREYAssertionFailedException,
             reason: reason),
                                            details: details)
     }
@@ -72,7 +72,7 @@ private func GREYAssert(@autoclosure expression: () -> BooleanType,
 private func GREYSetCurrentAsFailable() {
     let greyFailureHandlerSelector =
         #selector(GREYFailureHandler.setInvocationFile(_:andInvocationLine:))
-    if greyFailureHandler.respondsToSelector(greyFailureHandlerSelector) {
+    if greyFailureHandler.responds(to: greyFailureHandlerSelector) {
         greyFailureHandler.setInvocationFile!(#file, andInvocationLine: #line)
     }
 }

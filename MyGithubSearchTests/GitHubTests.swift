@@ -18,28 +18,28 @@ class MyGithubSearchTests: XCTestCase {
     }
     
     func testSearchRepository() {
-        OHHTTPStubs.stubRequestsPassingTest({ (request) -> Bool in
+        OHHTTPStubs.stubRequests(passingTest: { (request) -> Bool in
             guard let components = request.URL.flatMap({ NSURLComponents(URL: $0, resolvingAgainstBaseURL: false)}) else { return false }
             return components.host == "api,github.com" &&
               components.path == "/search/repositories" &&
                 (components.queryItems ?? []).contains(NSURLQueryItem(name: "q", value: "Hatena")) &&
                 (components.queryItems ?? []).contains(NSURLQueryItem(name: "page", value: "1"))
             }, withStubResponse: {(request) -> OHHTTPStubsResponse in
-                return OHHTTPStubsResponse(named: "search-repositories_q-Hatena_page-1", inBundle: NSBundle(forClass: self.dynamicType))
+                return OHHTTPStubsResponse(named: "search-repositories_q-Hatena_page-1", inBundle: Bundle(forClass: type(of: self)))
         })
 
 
-        let e = expectationWithDescription("API Request")
+        let e = expectation(description: "API Request")
         github.request(GitHubAPI.SearchRepositories(query: "Swift", page: 1)) { (task, response, error) -> Void in
             XCTAssert(response != nil)
             XCTAssert(error == nil)
             e.fulfill()
         }
-        waitForExpectationsWithTimeout(10, handler: nil)
+        waitForExpectations(timeout: 10, handler: nil)
     }
 
     func testSearchRepository_networkError() {
-        OHHTTPStubs.stubRequestsPassingTest({ (request) -> Bool in
+        OHHTTPStubs.stubRequests(passingTest: { (request) -> Bool in
             guard let components = request.URL.flatMap({ NSURLComponents(URL: $0, resolvingAgainstBaseURL: false) }) else { return false }
             return components.host == "api.github.com" &&
                 components.path == "/search/repositories" &&
@@ -49,32 +49,32 @@ class MyGithubSearchTests: XCTestCase {
                 return OHHTTPStubsResponse(error: NSError(domain: NSURLErrorDomain, code: NSURLErrorNotConnectedToInternet, userInfo: nil))
         })
 
-        let e = expectationWithDescription("API Request")
+        let e = expectation(description: "API Request")
         github.request(GitHubAPI.SearchRepositories(query: "XML", page: 3)) { (task, response, error) -> Void in
             XCTAssert(response == nil)
             XCTAssert(error != nil)
             e.fulfill()
         }
-        waitForExpectationsWithTimeout(10, handler: nil)
+        waitForExpectations(timeout: 10, handler: nil)
     }
 
     func testSearchRepository_rateLimit() {
-        OHHTTPStubs.stubRequestsPassingTest({ (request) -> Bool in
+        OHHTTPStubs.stubRequests(passingTest: { (request) -> Bool in
             guard let components = request.URL.flatMap({ NSURLComponents(URL: $0, resolvingAgainstBaseURL: false) }) else { return false }
             return components.host == "api.github.com" &&
                 components.path == "/search/repositories" &&
                 (components.queryItems ?? []).contains(NSURLQueryItem(name: "q", value: "Markdown")) &&
                 (components.queryItems ?? []).contains(NSURLQueryItem(name: "page", value: "13"))
             }, withStubResponse: { (request) -> OHHTTPStubsResponse in
-                return OHHTTPStubsResponse(named: "error_rate-limit", inBundle: NSBundle(forClass: self.dynamicType))
+                return OHHTTPStubsResponse(named: "error_rate-limit", inBundle: Bundle(forClass: type(of: self)))
         })
 
-        let e = expectationWithDescription("API Request")
+        let e = expectation(description: "API Request")
         github.request(GitHubAPI.SearchRepositories(query: "Markdown", page: 13)) { (task, response, error) -> Void in
             XCTAssert(response == nil)
             XCTAssert(error != nil)
             e.fulfill()
         }
-        waitForExpectationsWithTimeout(10, handler: nil)
+        waitForExpectations(timeout: 10, handler: nil)
     }
 }

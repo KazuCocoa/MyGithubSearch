@@ -34,7 +34,7 @@ class SearchRepositoriesManager {
                 self.completed = response.totalCount <= self.results.count
                 self.page += 1
             }
-            completion(error: error)
+            completion(error)
         }
         return true
     }

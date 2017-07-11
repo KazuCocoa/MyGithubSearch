@@ -265,12 +265,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 720825301CCD0BF600B3BF16 /* Build configuration list for PBXNativeTarget "MyGithubSearch" */;
 			buildPhases = (
-				474C55C31C271184F6E7227C /* 📦 Check Pods Manifest.lock */,
+				474C55C31C271184F6E7227C /* [CP] Check Pods Manifest.lock */,
 				720825041CCD0BF500B3BF16 /* Sources */,
 				720825051CCD0BF500B3BF16 /* Frameworks */,
 				720825061CCD0BF500B3BF16 /* Resources */,
-				5B36D6652FCCBBBDC5ADDE40 /* 📦 Embed Pods Frameworks */,
-				E9C006B7D44A3383F7AF5950 /* 📦 Copy Pods Resources */,
+				5B36D6652FCCBBBDC5ADDE40 /* [CP] Embed Pods Frameworks */,
+				E9C006B7D44A3383F7AF5950 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -285,12 +285,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 720825331CCD0BF600B3BF16 /* Build configuration list for PBXNativeTarget "MyGithubSearchTests" */;
 			buildPhases = (
-				80607C31DA9D0E2FE73DE8C0 /* 📦 Check Pods Manifest.lock */,
+				80607C31DA9D0E2FE73DE8C0 /* [CP] Check Pods Manifest.lock */,
 				720825181CCD0BF600B3BF16 /* Sources */,
 				720825191CCD0BF600B3BF16 /* Frameworks */,
 				7208251A1CCD0BF600B3BF16 /* Resources */,
-				37BAE83779F7ECBAB2B4C114 /* 📦 Embed Pods Frameworks */,
-				1327303166FD6F132442BACA /* 📦 Copy Pods Resources */,
+				37BAE83779F7ECBAB2B4C114 /* [CP] Embed Pods Frameworks */,
+				1327303166FD6F132442BACA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -306,11 +306,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 720825361CCD0BF600B3BF16 /* Build configuration list for PBXNativeTarget "MyGithubSearchUITests" */;
 			buildPhases = (
-				5DEC21C1E3535F1B79B190DD /* 📦 Check Pods Manifest.lock */,
+				5DEC21C1E3535F1B79B190DD /* [CP] Check Pods Manifest.lock */,
 				720825231CCD0BF600B3BF16 /* Sources */,
 				720825241CCD0BF600B3BF16 /* Frameworks */,
 				720825251CCD0BF600B3BF16 /* Resources */,
-				06846C06F1180A47DF584B40 /* 📦 Copy Pods Resources */,
+				06846C06F1180A47DF584B40 /* [CP] Copy Pods Resources */,
+				8170C3A9327721C93DD239D4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -326,12 +327,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 722477511CD5B28C00FCC154 /* Build configuration list for PBXNativeTarget "MyGithubSearchEarlGrey" */;
 			buildPhases = (
-				C2E37D742B6940BBC4E2333D /* 📦 Check Pods Manifest.lock */,
+				C2E37D742B6940BBC4E2333D /* [CP] Check Pods Manifest.lock */,
 				722477441CD5B28C00FCC154 /* Sources */,
 				722477451CD5B28C00FCC154 /* Frameworks */,
 				722477461CD5B28C00FCC154 /* Resources */,
-				2F1666956CD3D84DAF1BC853 /* 📦 Embed Pods Frameworks */,
-				2771B6F81CB6A83582548CA1 /* 📦 Copy Pods Resources */,
+				2F1666956CD3D84DAF1BC853 /* [CP] Embed Pods Frameworks */,
+				2771B6F81CB6A83582548CA1 /* [CP] Copy Pods Resources */,
 				722477521CD5B6CB00FCC154 /* CopyFiles */,
 			);
 			buildRules = (
@@ -351,7 +352,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = kazucocoa;
 				TargetAttributes = {
 					720825071CCD0BF500B3BF16 = {
@@ -362,11 +363,13 @@
 					7208251B1CCD0BF600B3BF16 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 47PCFA586Q;
+						LastSwiftMigration = 0830;
 						TestTargetID = 720825071CCD0BF500B3BF16;
 					};
 					720825261CCD0BF600B3BF16 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 47PCFA586Q;
+						LastSwiftMigration = 0830;
 						TestTargetID = 720825071CCD0BF500B3BF16;
 					};
 					722477471CD5B28C00FCC154 = {
@@ -435,14 +438,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		06846C06F1180A47DF584B40 /* 📦 Copy Pods Resources */ = {
+		06846C06F1180A47DF584B40 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -450,14 +453,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyGithubSearchUITests/Pods-MyGithubSearchUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		1327303166FD6F132442BACA /* 📦 Copy Pods Resources */ = {
+		1327303166FD6F132442BACA /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -465,14 +468,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyGithubSearchTests/Pods-MyGithubSearchTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2771B6F81CB6A83582548CA1 /* 📦 Copy Pods Resources */ = {
+		2771B6F81CB6A83582548CA1 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -480,14 +483,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyGithubSearchEarlGrey/Pods-MyGithubSearchEarlGrey-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2F1666956CD3D84DAF1BC853 /* 📦 Embed Pods Frameworks */ = {
+		2F1666956CD3D84DAF1BC853 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -495,14 +498,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyGithubSearchEarlGrey/Pods-MyGithubSearchEarlGrey-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		37BAE83779F7ECBAB2B4C114 /* 📦 Embed Pods Frameworks */ = {
+		37BAE83779F7ECBAB2B4C114 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -510,29 +513,29 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyGithubSearchTests/Pods-MyGithubSearchTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		474C55C31C271184F6E7227C /* 📦 Check Pods Manifest.lock */ = {
+		474C55C31C271184F6E7227C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		5B36D6652FCCBBBDC5ADDE40 /* 📦 Embed Pods Frameworks */ = {
+		5B36D6652FCCBBBDC5ADDE40 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -540,59 +543,74 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyGithubSearch/Pods-MyGithubSearch-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5DEC21C1E3535F1B79B190DD /* 📦 Check Pods Manifest.lock */ = {
+		5DEC21C1E3535F1B79B190DD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		80607C31DA9D0E2FE73DE8C0 /* 📦 Check Pods Manifest.lock */ = {
+		80607C31DA9D0E2FE73DE8C0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		C2E37D742B6940BBC4E2333D /* 📦 Check Pods Manifest.lock */ = {
+		8170C3A9327721C93DD239D4 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyGithubSearchUITests/Pods-MyGithubSearchUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E9C006B7D44A3383F7AF5950 /* 📦 Copy Pods Resources */ = {
+		C2E37D742B6940BBC4E2333D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E9C006B7D44A3383F7AF5950 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -702,8 +720,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -748,8 +768,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -768,6 +790,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -816,6 +839,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kazucocoa.MyGithubSearchTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyGithubSearch.app/MyGithubSearch";
 			};
 			name = Debug;
@@ -829,6 +853,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kazucocoa.MyGithubSearchTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyGithubSearch.app/MyGithubSearch";
 			};
 			name = Release;
@@ -841,6 +866,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kazucocoa.MyGithubSearchUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = MyGithubSearch;
 			};
 			name = Debug;
@@ -853,6 +879,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kazucocoa.MyGithubSearchUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = MyGithubSearch;
 			};
 			name = Release;

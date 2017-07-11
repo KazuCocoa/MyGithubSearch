@@ -57,7 +57,7 @@ class SearchViewController: UITableViewController, ApplicationContextSettable {
 
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if let searchManager = searchManager, indexPath.row >= searchManager.results.count - 1 {
-            searchManager.search(false) { [weak self] (error) in
+            _ = searchManager.search(false) { [weak self] (error) in
                 if let error = error {
                     print(error)
                 } else {
@@ -77,7 +77,7 @@ extension SearchViewController: UISearchBarDelegate {
         guard let searchText = searchController.searchBar.text else { return }
         guard let searchManager = SearchRepositoriesManager(github: appContext.github, query: searchText) else { return }
         self.searchManager = searchManager
-        searchManager.search(true) { [weak self] (error) in
+        _ = searchManager.search(true) { [weak self] (error) in
             if let error = error {
                 print(error)
             } else {

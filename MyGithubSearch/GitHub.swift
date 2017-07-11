@@ -30,7 +30,7 @@ open class GitHubAPI {
     }
 
     open func request<Endpoint: APIEndpoint>(_ endpoint: Endpoint, handler: @escaping (_ task: URLSessionDataTask, _ response: Endpoint.ResponseType?, _ error: Error?) -> Void) {
-        let success = { (task: URLSessionDataTask, response: AnyObject?) -> Void in
+        let success = { (task: URLSessionDataTask, response: Any?) -> Void in
             if let JSON = response as? JSONObject {
                 do {
                     let response = try Endpoint.ResponseType(JSON: JSON)
@@ -42,13 +42,13 @@ open class GitHubAPI {
                 handler(task, nil, APIError.unexpectedResponse)
             }
         }
-        let failure = { (task: URLSessionDataTask?, error: NSError) -> Void in
-            var newError: NSError = error
-            if let errorData = error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey] as? Data,
+        let failure = { (task: URLSessionDataTask?, error: Error) -> Void in
+            var newError: NSError = error as NSError
+            if let errorData = error._userInfo?[AFNetworkingOperationFailingURLResponseDataErrorKey] as? Data,
                 let errorDescription = NSString(data: errorData, encoding: String.Encoding.utf8.rawValue) {
-                var userInfo = error.userInfo
-                userInfo[NSLocalizedFailureReasonErrorKey] = errorDescription
-                newError = NSError(domain: error.domain, code: error.code, userInfo: userInfo)
+                var userInfo = error._userInfo
+                // userInfo?[NSLocalizedFailureReasonErrorKey] = errorDescription
+                newError = NSError(domain: error._domain, code: error._code, userInfo: userInfo as! [AnyHashable : Any])
             }
             handler(task!, nil, newError)
         }
